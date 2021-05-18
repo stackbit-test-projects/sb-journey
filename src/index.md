@@ -65,7 +65,7 @@ faq:
         nulla ut leo fermentum, nec dapibus purus venenatis. In pharetra
         fermentum nulla, eget posuere quam iaculis vel. Nunc et nisl sed ligula
         tincidunt sodales.
-    - question: Proin vehicula tellus in nisl imperdiet?
+    - question: This is a question
       answer: >-
         Aenean mollis mi at cursus ornare. Sed nec enim erat. Sed consectetur
         nulla ut leo fermentum, nec dapibus purus venenatis. In pharetra

@@ -1,0 +1,132 @@
+stackbitVersion: ~0.3.0
+ssgName: eleventy
+nodeVersion: '12'
+publishDir: _site
+dataDir: src/_data
+pagesDir: src
+models:
+  src:
+    type: page
+    label: Src
+    match:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: object
+        name: jumbotron
+        label: Jumbotron
+        fields:
+          - type: string
+            name: tagline
+            label: Tagline
+          - type: object
+            name: background
+            label: Background
+            fields:
+              - type: image
+                name: desktop
+                label: Desktop
+              - type: image
+                name: mobile
+                label: Mobile
+          - type: string
+            name: body
+            label: Body
+      - type: object
+        name: lineup
+        label: Lineup
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+          - type: string
+            name: body
+            label: Body
+          - type: list
+            name: speakers
+            label: Speakers
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: name
+                  label: Name
+                - type: string
+                  name: position
+                  label: Position
+                - type: string
+                  name: fun_fact
+                  label: Fun Fact
+                - type: image
+                  name: image
+                  label: Image
+                - type: object
+                  name: social
+                  label: Social
+                  fields:
+                    - type: string
+                      name: twitter
+                      label: Twitter
+                    - type: string
+                      name: facebook
+                      label: Facebook
+                    - type: string
+                      name: instagram
+                      label: Instagram
+      - type: string
+        name: mission
+        label: Mission
+      - type: object
+        name: faq
+        label: Faq
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+          - type: string
+            name: body
+            label: Body
+          - type: list
+            name: questions
+            label: Questions
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: question
+                  label: Question
+                - type: string
+                  name: answer
+                  label: Answer
+  src_1:
+    type: page
+    label: Src 1
+    match: '*'
+    exclude:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+  next_event:
+    type: data
+    label: Next Event
+    file: next_event.json
+    fields:
+      - type: string
+        name: date
+        label: Date
+      - type: string
+        name: time
+        label: Time
+      - type: string
+        name: location
+        label: Location
+      - type: string
+        name: cost
+        label: Cost
